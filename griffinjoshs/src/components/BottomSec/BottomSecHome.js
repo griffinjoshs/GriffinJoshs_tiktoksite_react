@@ -4,6 +4,8 @@ import "../BottomSec/styles/BottomSec.css";
 // import BottomSecImage from "../BottomSec/BottomSecImage";
 import { BiRightArrowCircle } from "react-icons/bi";
 import Video from '../Video/Video'
+import ButtonComp from '../Button/Button'
+
 
 // By importing the Header.css file, it is added to the DOM whenever this component loads
 
@@ -13,7 +15,6 @@ function BottomSecHome() {
             <Row className="secHeader">
                 <Col sm={12} lg={1}></Col>
                 <Col sm={12} lg={5} id="secImgCol">
-                    {/* <BottomSecImage /> */}
                     <Video/>
                 </Col>
                 <Col lg={.5}></Col>
@@ -26,7 +27,7 @@ function BottomSecHome() {
                         </p>
                         <br></br>
                         <p>
-                            <Button variant="light" size="lg" id="bottomBtn">Join Now <BiRightArrowCircle /></Button>
+                        <ButtonComp>Subscribe <BiRightArrowCircle /></ButtonComp>
                         </p>
                     </Jumbotron>
                 </Col>

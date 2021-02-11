@@ -3,11 +3,13 @@ import { Jumbotron, Button, Container, Col, Row } from 'react-bootstrap';
 import "../BottomSec/styles/BottomSec.css";
 import { FiRadio } from "react-icons/fi";
 import BottomSecImage from "../BottomSec/BottomSecImage";
+import ButtonComp from '../Button/Button'
 
 // By importing the Header.css file, it is added to the DOM whenever this component loads
 
 function AboutLower() {
   return ( 
+    <div>
     <Container fluid id="homeFront" >
   <Row className="header">
   <Col lg={1}></Col>
@@ -24,16 +26,21 @@ function AboutLower() {
     <Row className="mb-2" id="btn">
     <Col sm={12} xl={6}>
     <br className="btnSpace"></br>
-    <Button variant="secondary" className="transparent" id="btns" size="lg">
-    <FiRadio/> Subscribe 
-    </Button>
+    <ButtonComp
+    className='btns'
+    buttonStyle='btn--outline'
+    buttonSize='btn--large'>
+      <FiRadio/> Subscribe 
+    </ButtonComp>
     </Col>
     </Row>
-  </Jumbotron></Col>
+  </Jumbotron>
+  </Col>
       <Col lg={1}></Col>
   </Row>
   <div className="space"></div>
   </Container>
+  </div>
   );
 }
 

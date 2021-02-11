@@ -14,7 +14,6 @@ function infoSection() {
                     <Col md={12} lg={7}>
                         <p className="infoText">Thank ya'll for the tremendous support over the last year! Make sure to Subscribe and check out my merchandise! And yes I built this site myself.</p>
                     </Col>
-                    {/* <Col md={12} lg={1}></Col> */}
                 </Row>
             </Container>
       </section>

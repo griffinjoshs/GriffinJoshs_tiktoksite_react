@@ -1,4 +1,10 @@
-.background {
+.boxSection {
+    padding-top: 50px;
+    /* padding-bottom: 20px; */
+    position: relative;
+    width: 100%;
+    color: #555c63;
+    background: rgb(19, 17, 59);
     background: url('../../images/grunge.png'), linear-gradient(277deg, rgba(21,20,60,1) 0%, rgba(0,0,0,1) 80%);
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -7,10 +13,6 @@
     background-size: cover;
 }
 
-.bottomAbout {
-    color: white;
-}
-
-.spacer {
-    padding-bottom: 100px;
+.space {
+    padding-top: 100px;
 }
