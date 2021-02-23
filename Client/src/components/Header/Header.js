@@ -24,20 +24,23 @@ function Header() {
 <br></br>
     <Row className="mb-2" id="btn">
       <Col sm={12} lg={5} id="primaryBtnCol">
-    <ButtonComp href='/subscribe'
+    <ButtonComp
     className='btns'
     buttonStyle='btn--outline'
-    buttonSize='btn--large'>
+    buttonSize='btn--large'
+    linkTo='#subscribeBtn'
+    >
       Subscribe
     </ButtonComp>
     </Col>
     <Col xl={1}></Col>
     <Col sm={12} xl={5}>
     <br className="btnSpace"></br>
-    <ButtonComp href='https://griffinjoshs.bigcartel.com/'
+    <ButtonComp
     className='btns'
     buttonStyle='btn--primary'
-    buttonSize='btn--large'>
+    buttonSize='btn--large'
+    onClick='https://griffinjoshs.bigcartel.com/'>
       Merch <FiArrowRightCircle/>
     </ButtonComp>
     </Col>

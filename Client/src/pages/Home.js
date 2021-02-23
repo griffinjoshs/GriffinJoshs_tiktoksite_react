@@ -9,12 +9,12 @@ import CardContent from '../components/CardSection/CardContent'
 import BottomSecHome from "../components/BottomSec/BottomSecHome";
 import ParallaxContent from '../components/ParallaxSection/ParallaxContent'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// import Navbar from "./components/Navbar";
+import Navbar from '../components/Navbar/Navbar';
 
 function home() {
   return (
     <div>
+    <Navbar />
     <Header />
     <ParallaxSection
     Header = {ParallaxContent[0].Header}

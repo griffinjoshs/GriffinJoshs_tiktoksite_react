@@ -7,10 +7,12 @@ import Footer from "../components/Footer/Footer";
 import ParallaxSection from '../components/ParallaxSection/ParallaxSection';
 import ParallaxContent from '../components/ParallaxSection/ParallaxContent'
 import CardSection from '../components/CardSection/CardSection'
+import Navbar from '../components/Navbar/Navbar';
 
 function About() {
     return (
       <div>
+      <Navbar/>
       <AboutHeader />
       <CardSection/>
       <AboutLower/>

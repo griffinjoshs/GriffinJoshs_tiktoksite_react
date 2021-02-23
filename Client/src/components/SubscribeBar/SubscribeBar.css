@@ -19,7 +19,7 @@
     color: white;
 }
 
-#email {
+#subEmailInput {
     border-radius: 15px;
     display: block;
     width: 65%;
@@ -27,7 +27,6 @@
     box-sizing: border-box;
     margin: 16px 0;
     border: 1px solid rgb(75, 75, 99);
-    /* border: none; */
     background: #111;
     padding: 20px 40px;
     outline: none;
@@ -36,11 +35,11 @@
     align-items: center;
 }
 
-#email:hover {
+#subEmailInput:hover {
     border: 1px solid rgb(189, 189, 189);
 }
 
-#email:active{
+#subEmailInput:active{
     box-shadow: 0 0 30px 24px blue;
 }
 
@@ -74,3 +73,43 @@
         text-align: center;
     }
 }
+
+/* Modal */
+.modalHeader {
+    background: black!important;
+}
+
+.modalBody {
+    background: black!important;
+}
+
+.modalInput {
+    border-radius: 15px;
+    display: block;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 1px solid rgb(75, 75, 99);
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;  
+    align-items: center;
+}
+
+.modalInput:hover {
+    border: 1px solid rgb(189, 189, 189);
+}
+
+.modalInput:active {
+    box-shadow: 0 0 30px 24px blue;
+}
+
+button.close {
+    color: white;
+}
+
+button.close:hover {
+    color: white;
+}
+
