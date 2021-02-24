@@ -44,6 +44,8 @@ const LinkPage = () => {
     return (
         <>
          <Container>
+         <br></br>
+         <br></br>
             <Row className='profile-row'>
                 <img src={profilePic} alt={profilePic} width='200' height='200' id='profile-pic'></img>
             </Row>

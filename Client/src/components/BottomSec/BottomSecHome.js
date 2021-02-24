@@ -3,7 +3,6 @@ import { Jumbotron, Button, Container, Col, Row } from 'react-bootstrap';
 import "./styles/BottomSec.css";
 // import BottomSecImage from "../BottomSec/BottomSecImage";
 import { BiRightArrowCircle } from "react-icons/bi";
-import Video from '../Video/Video'
 import ButtonComp from '../Button/Button'
 
 
@@ -15,9 +14,14 @@ function BottomSecHome() {
             <Row className="secHeader">
                 <Col sm={12} lg={1}></Col>
                 <Col sm={12} lg={5} id="secImgCol">
-                    <Video/>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8VcVeW9hAZ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </Col>
-                <Col lg={.5}></Col>
+                <Col lg={1}></Col>
                 <Col sm={12} lg={5} id="jumbtronColumn">
                     <Jumbotron>
                         <h2>Become an OG!</h2>

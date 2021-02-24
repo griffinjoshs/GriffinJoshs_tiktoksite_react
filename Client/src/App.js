@@ -10,16 +10,15 @@ import "./App.css";
 import LinkPage from "./pages/LinkPage";
 
 function App() {
-  const [msg, setMsg] = useState("loading...");
+  const [msg, setMsg] = useState(console.log("loading..."));
 
   useEffect(() => {
     axios
       .get("http://localhost:8000/api")
-      .then((res) => setMsg(res.data.message));
+      .then((res) => setMsg(console.log(res.data.message)));
   }, []);
   return (
     <div className="App">
-      <h2>Message from backend{msg}</h2>
       <Router>
         <Switch>
           <Route exact path="/" component={home} />

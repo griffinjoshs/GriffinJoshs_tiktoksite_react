@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./ContactForm.css";
 import { FiSend } from "react-icons/fi";
 import ButtonComp from "../Button/Button";
-// import { GrMail } from "react-icons/gr";
+import axios from 'axios'
+import { Form } from "react-bootstrap";
 
 function ContactForm() {
         const [data, setData] = useState({
@@ -24,17 +25,21 @@ function ContactForm() {
             ...data,
             [event.target.name]: event.target.value,
           });
-          console.log("********DATA INSIDE CHANGE HANDLER *******");
-          console.log(data);
+          // console.log("********DATA INSIDE CHANGE HANDLER *******");
+          // console.log(data);
         };
-        console.log(data);
+        // console.log(data);
       
         const submitHandler = (event) => {
           event.preventDefault();
           console.log("data object");
-          // axios.post('http://localhost:8000/api/contact/', data)
-          // .then()
-          // .catch();
+          axios.post('http://localhost:8000/api/contact', data)
+          .then(res => {
+            console.log(res.data.results)
+          })
+          .catch(err => {
+            console.log(err)
+          });
           console.log(data);
           setData({
             firstName: "",
@@ -59,61 +64,57 @@ function ContactForm() {
             {thanks.active ? (
               <div>{thanks.message}</div>
             ) : (
-              <div className='contact-form' onSubmit={submitHandler}>
+              <Form className='contact-form' onSubmit={submitHandler}>
                 {/* <div className="form-group container p-5" id='inputContainer'> */}
                   <input
-                    className="form-control"
+                    className="contact-form-text"
                     type="text"
                     name="firstName"
                     id="firstName" 
-                    className="contact-form-text"
                     placeholder="First Name"
                     onChange={changeHandler}
                     value={data.firstName}
                   />
                   <input
-                    className="form-control"
+                    className="contact-form-text"
                     type="text"
                     name="lastName"
                     id="lastName" 
-                    className="contact-form-text"
                     placeholder="Last Name"
                     onChange={changeHandler}
                     value={data.lastName}
                   />
                   <input
-                    className="form-control"
+                    className="contact-form-text"
                     type="text"
                     name="email"
                     id="emailAddress" 
-                    className="contact-form-text"
                     placeholder="Email"
                     onChange={changeHandler}
                     value={data.email}
                   />
                   <input
-                    className="form-control"
+                    className="contact-form-text"
                     type="text"
                     name="phone"
-                    id="number" className="contact-form-text"
+                    id="number"
                     placeholder="Phone Number"
                     onChange={changeHandler}
                     value={data.phone}
                   />
                   <input
-                    className="form-control"
+                    className="contact-form-text"
                     type="text"
                     name="subject"
-                    id="subject" className="contact-form-text"
+                    id="subject" 
                     placeholder="Subject"
                     onChange={changeHandler}
                     value={data.subject}
                   />
                   <textarea
-                    className="form-control"
+                    className="contact-form-text"
                     type="text"
                     name="message"
-                    className="contact-form-text"
                     id="message"
                     placeholder="Message"
                     onChange={changeHandler}
@@ -124,7 +125,7 @@ function ContactForm() {
     className='btns'
     buttonStyle='btn--primary'
     buttonSize='btn--sortawide'>Send <FiSend/></ButtonComp>
-                </div>
+                </Form>
               // </div>
             )}
           </div>
